@@ -16,15 +16,15 @@ function Member({ member }) {
     }
 
     return (
-        <div>
+        <div className="member-card">
+            <h1>{`${member.name.first} ${member.name.last}`}</h1>
             <img src={member.picture.large} alt={`${member.name.first} ${member.name.last}`} />
-            <p>{`${member.name.first} ${member.name.last}`}</p>
             <p>{member.location.street.number} {member.location.street.name}</p>
             <p>{`${member.location.city}, ${member.location.state} ${member.location.postcode}`}</p>
             <p>{member.email}</p>
             <p>{member.phone}</p>
             <p>{formattedDate}</p> {/* Display the formatted date here */}
-            <Link href="/Members" legacyBehavior>
+            <Link href="/" legacyBehavior>
                 <a className="back-button">Back</a>
             </Link>
         </div>

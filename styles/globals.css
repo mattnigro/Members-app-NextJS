@@ -25,8 +25,12 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+h1 {
+  font-size: 2rem;
+  margin: 1rem 0;
+}
 .back-button {
-  background-color: #4CAF50; /* Green */
+  background-color: #06154b;
   border: none;
   color: white;
   padding: 10px 20px;
@@ -36,11 +40,18 @@ body {
   font-size: 16px;
   margin-top: 20px;
   cursor: pointer;
+  border-radius: 7px;
+  box-shadow: inset #0022e1 0 0 7px 3px, white 0 0 3px 1px;
 }
 .members-group {
   padding: 1rem;
   width: 1080px;
-  margin: 1rem auto 1rem auto;
+  margin: 1rem auto;
+}
+.members-group {
+  padding: 1rem;
+  width: 1080px;
+  margin: 1rem auto;
 }
 .members-list {
   display: grid;
@@ -59,4 +70,9 @@ input{
 .members-list li {
   list-style: none;
   text-align: left;
+}
+.member-card {
+  padding: 1rem;
+  width: 50%;
+  margin: 1rem;
 }
