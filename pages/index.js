@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import Link from 'next/link'
 
-function Index({ members, setMembers }) {
+function Index({ members }) {
     const [searchTerm, setSearchTerm] = useState("");
-    const [loading, setLoading] = useState(false)
+    const [loading] = useState(false)
 
     // Filter members based on search term and sort by first name
     const filteredMembers = members

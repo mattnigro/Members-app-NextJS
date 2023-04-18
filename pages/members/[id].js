@@ -46,10 +46,8 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-    console.log(params);
     const res = await fetch(`https://randomuser.me/api/?seed=${params.id}`)
     const data = await res.json();
-    console.log(data.results[0]);
     return {
         props: {
             member: data.results[0],
