@@ -3,76 +3,92 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+    :root {
+        --foreground-rgb: 255, 255, 255;
+        --background-start-rgb: 15, 15, 70;
+        --background-end-rgb: 30, 30, 112;
+    }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
+    color: rgb(var(--foreground-rgb));
+    background: linear-gradient(
+            to right,
+            transparent,
+            rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
 }
 h1 {
-  font-size: 2rem;
-  margin: 1rem 0;
+    font-size: 2rem;
+    margin: 1rem 0;
 }
 .back-button {
-  background-color: #06154b;
-  border: none;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin-top: 20px;
-  cursor: pointer;
-  border-radius: 7px;
-  box-shadow: inset #0022e1 0 0 7px 3px, white 0 0 3px 1px;
+    background-color: #06154b;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 7px;
+    box-shadow: inset #0022e1 0 0 7px 3px, white 0 0 3px 1px;
+}
+.back-button:hover{
+    border: 1px solid #FFF;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 7px;
+    box-shadow: inset #0022e1 0 0 12px 7px, white 0 0 12px 3px;
+    transition: all 0.3s ease-in-out;
 }
 .members-group {
-  padding: 1rem;
-  width: 1080px;
-  margin: 1rem auto;
-}
-.members-group {
-  padding: 1rem;
-  width: 1080px;
-  margin: 1rem auto;
+    padding: 1rem;
+    width: 1080px;
+    margin: 1rem auto;
 }
 .members-list {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 1rem;
-  padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    padding: 1rem;
 }
 input{
-  padding: 10px;
-  margin: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  width: 100%;
+    color: black;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 100%;
 }
 .members-list li {
-  list-style: none;
-  text-align: left;
+    list-style: none;
+    text-align: left;
 }
 .member-card {
-  padding: 1rem;
-  width: 50%;
-  margin: 1rem;
+    padding: 1rem;
+    width: 50%;
+    margin: 1rem;
+}
+a{
+    text-decoration: underline;
+    color: #fff;
+}
+a:hover{
+    text-decoration: underline;
+    color: #000eff;
 }
