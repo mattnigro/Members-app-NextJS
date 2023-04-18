@@ -5,28 +5,6 @@ function Index({ members, setMembers }) {
     const [searchTerm, setSearchTerm] = useState("");
     const [loading, setLoading] = useState(false)
 
-    const handleClick = async e => {
-        setLoading(true)
-
-        try {
-            const res = await fetch('https://randomuser.me/api/')
-            const data = await res.json()
-
-            console.log('Search term:', e.target.value);
-            setSearchTerm(e.target.value);
-            setLoading(false)
-
-            // Add the new member to the list of members
-            const newMember = data.results[0]
-            setMembers(members => [newMember, ...members])
-            // Store updated members list in local storage
-            localStorage.setItem('members', JSON.stringify([newMember, ...members]))
-        } catch (error) {
-            console.log('Error:', error.message);
-            setLoading(false)
-        }
-    }
-
     // Filter members based on search term and sort by first name
     const filteredMembers = members
         .filter(member => {
